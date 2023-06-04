@@ -1,6 +1,5 @@
 # crm_python
-Create CRM in Python with Django
-
+Créer un CRM en *Python et le framework Django* 
 ## Installation
 
 Clonez le dépôt GitHub :
