@@ -13,4 +13,5 @@ cursorObject = dataBase.cursor()
 # create dabase 
 cursorObject.execute("CREATE DATABASE crm_tuto")
 
+#print
 print('All done !')
