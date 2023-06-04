@@ -65,11 +65,11 @@ WSGI_APPLICATION = 'crm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tutorial',
+        'NAME': 'crm_tuto',
         'USER': 'root',
         'PASSWORD' : 'password',
         'HOST' : 'localhost',
-        'PORT' : '3306'cd
+        'PORT' : '3306'
     }
 }
 
