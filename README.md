@@ -7,3 +7,4 @@ Clonez le dépôt GitHub :
    git clone https://github.com/simbabn/crm_python.git 
    ```
 
+Tout se passe bien
