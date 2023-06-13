@@ -1,9 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from .models import Record
+
 
 # Create your views here.
 def home(request):
+    records = Record.objects.all() #grab all table and asign to webpage 
+
+    #check  to see if logging in 
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -17,7 +22,7 @@ def home(request):
             messages.success(request, "There Was an Error Logging In")
             return redirect('home')
     else:
-        return render(request, 'home.html', {})
+        return render(request, 'home.html', {'records':records})
 
 def login_user(request):
     pass
