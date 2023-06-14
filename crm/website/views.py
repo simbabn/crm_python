@@ -28,4 +28,15 @@ def login_user(request):
     pass
 
 def logout_user(request):
-    pass
+	logout(request)
+	messages.success(request, "You Have Been Logged Out...")
+	return redirect('home')
+        
+def customer_record(request, pk):
+	if request.user.is_authenticated:
+		# Look Up Records
+		customer_record = Record.objects.get(id=pk)
+		return render(request, 'record.html', {'customer_record':customer_record})
+	else:
+		messages.success(request, "You Must Be Logged In To View That Page...")
+		return redirect('home')  
